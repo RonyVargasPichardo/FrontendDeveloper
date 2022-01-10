@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
@@ -13,7 +12,7 @@
 
     
     <style> 
-        :root {
+     :root {
     --very-light-pink: #c7c7c7;
     --hospital-green: #acd9b2;
     --text-input-field: #f7f7f7;
@@ -53,43 +52,30 @@ body{
 }
 
 .logo{
-    width: 15rem;
+    width: 20rem;
     justify-self: center;
     margin-bottom: 4.8rem;
     display: none;
 }
 
-.title{
-    font-size: var(--lg);
-    justify-self: center;
-    color: var(--black);
-    margin-bottom: 1.2rem;
-}
-
-.subtitle{
-    font-size: var(--md);
-    text-align: center;
-    color: var(--very-light-pink);
-    font-weight: 300;
-    margin-top: 0;
-    margin-bottom: 3.2rem;
-}
-
-.email-image{
-    width: 13.2rem;
-    height: 13.2rem;
-    border-radius: 50%;
-    background-color: var(--text-input-field);
+.form{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-self: center;
+    flex-direction: column;
+}
+.label{
+    font-size: var(--sm);
+    font-weight: bold;
+    margin-bottom: .4rem;
+}
+.input{
+    border: none;
+    height: 4rem;
+    background-color: var(--text-input-field);
+    border-radius: .8rem;
     margin-bottom: 2rem;
+    font-size: var(--md);
+    padding: .8rem;
 }
-.email-image img{
-    width: 8rem;
-}
-
 
 .primary-button{
     color: var(--white);
@@ -104,28 +90,46 @@ body{
 }
 
 .button-login{
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-bottom: 3rem;
 }
-
-.redireccion{
-    text-align: center;
-    font-size: var(--sm);
-    color: var(--very-light-pink);
-    font-weight: bold;
+.button-sign{
+    margin-top: 5rem;
+    margin-bottom: 2rem;
 }
 
-.enlace{
-    text-decoration: none;
+
+.secundary-button{
     color: var(--hospital-green);
+    background-color: var(--white);
+    border: 1px solid var(--hospital-green);
+    border-radius: .8rem;
+    width: 100%;
+    font-size: var(--md);
     font-weight: bold;
+    height: 5rem;
+    cursor: pointer;
+}
+
+form a{
+    text-decoration: none;
+    font-size: var(--sm);
+    color:var(--hospital-green);
+    text-align: center;
 }
 
 @media (max-width: 640px) {
     .logo{
         display: block;
     }
+
+   .secundary-button{
+        position: absolute;
+        bottom: 20px; 
+        width: 30rem; 
+   }
 }
+
 </style>
 </head>
 
@@ -135,17 +139,16 @@ body{
         <div class="form-container">
             <img src="./Rony_Logos/logo_yard_sale.svg" alt="logo" class="logo">
 
-            <h1 class="title">Create a new password</h1>
-            <p class="subtitle">Enter a new password for our acoount</p>
-
             <form action="" class="form">
+                <label for="email" class="label">Email address</label>
+                <input type="email" id="email" class="input input-email" placeholder="example@gmail.com">
+
                 <label for="password" class="label">Password</label>
                 <input type="password" id="password" class="input input-password" placeholder="*********">
 
-                <label for="new-password" class="label">Re-enter password</label>
-                <input type="text" id="new-password" class="input input-password" placeholder="*********">
-
-                <input type="submit" value="Confirm new password" class="primary-button button-login">
+                <input type="submit" value="Log in" class="primary-button button-login">
+                <a href="#">Forgot my password</a>
+                <input type="submit" value="Sign up" class="secundary-button button-sign">
             </form>
         </div>
     </div>
