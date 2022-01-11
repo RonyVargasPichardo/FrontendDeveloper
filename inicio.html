@@ -42,12 +42,115 @@ body{
     font-family: 'Quicksand', sans-serif;
 }
 
+
+/* stilos del navbar inicio */
+
+nav{
+    display: flex;
+    padding: .8rem 5rem;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--very-light-pink);
+}
+.menu{
+    display: none;
+}
+.logo{
+    width: 12rem;
+    margin-right: 4rem;
+}
+
+.navbar-left ul,
+.navbar-right ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left ul a,
+.navbar-right ul a{
+    text-decoration: none;
+}
+
+.navbar-left{
+    display: flex;
+}
+
+.navbar-left ul li a{
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+    padding: 0 1rem;
+    border: 1px solid var(--white);
+    border-radius: .8rem;
+}
+
+.navbar-left ul li a:hover{
+    color: var(--hospital-green);
+    border: 1px solid var(--hospital-green);
+}
+
+.navbar-right ul{
+    width: 20rem;
+    justify-content: space-between;
+}
+
+.navbar-right ul li:nth-child(1){
+    color: var(--very-light-pink);
+    font-size: var(--sm);
+}
+
+.logo-right{
+    width: 3rem;
+}
+
+.navbar-shopping-cart{
+    position: relative;
+}
+
+.navbar-shopping-cart_child{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: var(--hospital-green);
+    text-align: center;
+    justify-content: center;
+    font-size: .8rem;
+    font-weight: bold;
+    color: var(--black);
+}
+
+@media (max-width: 640px) {
+
+    nav{
+    padding: .8rem 2rem;
+    justify-content: space-between;
+    }
+    .menu{
+        display: block;
+    }
+
+    .navbar-left ul{
+    display: none;
+    }
+    .navbar-right ul{
+        width: auto;
+    }
+    .navbar-right ul li:nth-child(1){
+        display: none;
+    }
+}
+
+/* 
+stilos del main container de la pagina */
+
 .cards-container{
     display: grid;
     grid-template-columns: repeat(auto-fill, var(--size-card-md));
     gap: 3rem;
     place-content: center;
-
+    margin-top: 2rem;
 }
 
 .product-card{
@@ -83,9 +186,7 @@ body{
 
     .cards-container{
     grid-template-columns: repeat(auto-fill, var(--size-card-sm));
-
 }
-
     .product-card{
     width: var(--size-card-sm);
    
@@ -99,6 +200,32 @@ body{
 </style>
 </head>
 <body>
+    <nav>
+        <img src="./Rony_Icons/icon_menu.svg" alt="menu" class="menu">
+
+        <div class="navbar-left">
+            <img src="./Rony_Logos/logo_yard_sale.svg" alt="logo" class="logo">
+
+            <ul>
+                <li><a href="">All</a></li>
+                <li><a href="">Clothes</a></li>
+                <li><a href="">Electronics</a></li>
+                <li><a href="">Future</a></li>
+                <li><a href="">Toys</a></li>
+                <li><a href="">Others</a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+            <ul>
+                <li>example@gmaial.com</li>
+                <li class="navbar-shopping-cart">
+                    <img src="./Rony_Icons/icon_shopping_cart.svg" alt="logo" class="logo-right">
+                    <div class="navbar-shopping-cart_child">2</div>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <section class="main-container">
         <div class="cards-container">
             <div class="product-card">
