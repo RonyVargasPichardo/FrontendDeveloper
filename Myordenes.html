@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./Rony_Logos/favicon_bota_fora.svg" type="img">
+
+
+<style>
+
+:root {
+    --very-light-pink: #c7c7c7;
+    --hospital-green: #acd9b2;
+    --text-input-field: #f7f7f7;
+    --dark: #232830;
+    --white: #ffffff;
+    --black: #000000;
+    --sm: 1.4rem;
+    --md: 1.6rem;
+    --lg: 1.8rem;
+    --size-card-sm: 10rem;
+    --size-card-md: 10rem;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.my-order{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    place-items: center;
+}
+.order-container{
+    display: grid;
+    grid-template-rows: repeat(auto-fill, var(--size-card-sm));
+    gap: 2rem;  
+    width: 40rem;
+}
+
+.order-container h1{
+    display: flex;
+    align-items: center;
+    font-size: var(--lg);
+    font-weight: bold;
+    color: var(--black);
+}
+
+.content-cats{
+    border-radius: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.content-cats div:nth-child(1) p:nth-child(1){
+    color: var(--black);
+    font-size: var(--md);
+    font-weight: bold;
+}
+
+.content-cats div:nth-child(1) p:nth-child(2){
+    font-size: var(--md);
+    color: var(--very-light-pink);
+}
+
+.content-cats div:nth-child(2) p{
+    color: var(--black);
+    font-size: var(--md);
+    font-weight: bold;
+}
+.content-cats div:nth-child(2){
+    display: flex;
+    justify-content: space-between;
+    width: 10rem;
+}
+
+
+
+@media (max-width: 640px) {
+
+.my-order{
+    align-items: start;
+}
+.order-container{
+    width: 100vw;
+    padding: 2rem;
+}
+
+.order-container h1{
+    justify-content: center;
+    border-bottom: 1px solid var(--hospital-green);
+}
+
+}
+
+</style>
+</head>
+<body>
+    <div class="my-order">
+        <div class="order-container">
+           
+            <h1>My orders</h1>
+            
+            <div class="content-cats">
+                <div>
+                    <p>04.25.2021</p>
+                    <p>6 articles</p>
+                </div>
+                <div>
+                    <p>$ 560.00</p>
+                    <img src="./Rony_Icons/flechita.svg" alt="">
+                </div>
+            </div>
+            <div class="content-cats">
+                <div>
+                    <p>04.25.2021</p>
+                    <p>6 articles</p>
+                </div>
+                <div>
+                    <p>$ 560.00</p>
+                    <img src="./Rony_Icons/flechita.svg" alt="">
+                </div>
+            </div>
+            <div class="content-cats">
+                <div>
+                    <p>04.25.2021</p>
+                    <p>6 articles</p>
+                </div>
+                <div>
+                    <p>$ 560.00</p>
+                    <img src="./Rony_Icons/flechita.svg" alt="">
+                </div>
+            </div>
+            <div class="content-cats">
+                <div>
+                    <p>04.25.2021</p>
+                    <p>6 articles</p>
+                </div>
+                <div>
+                    <p>$ 560.00</p>
+                    <img src="./Rony_Icons/flechita.svg" alt="">
+                </div>
+            </div>
+            <div class="content-cats">
+                <div>
+                    <p>04.25.2021</p>
+                    <p>6 articles</p>
+                </div>
+                <div>
+                    <p>$ 560.00</p>
+                    <img src="./Rony_Icons/flechita.svg" alt="">
+                </div>
+            </div>
+            <div class="content-cats">
+                <div>
+                    <p>04.25.2021</p>
+                    <p>6 articles</p>
+                </div>
+                <div>
+                    <p>$ 560.00</p>
+                    <img src="./Rony_Icons/flechita.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
